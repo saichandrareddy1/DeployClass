@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import sklearn 
+from sklearn.linear_model import LogisticRegression
 
 # Title
 st.header("Streamlit Machine Learning App")
