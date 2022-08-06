@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import joblib
+import pickle
 
 # Title
 st.header("Streamlit Machine Learning App")
@@ -18,7 +18,7 @@ eyes = st.selectbox("Select Eye Colour", ("Blue", "Brown"))
 if st.button("Submit"):
     
     # Unpickle classifier
-    clf = joblib.load("clf.pkl")
+    clf = pickle.load(open("clf.pkl", "rb"))
     
     # Store inputs into dataframe
     X = pd.DataFrame([[height, weight, eyes]], 
